@@ -77,6 +77,7 @@ class CombineModule extends AbstractModule
         foreach ($source_paths as $path) {
             // Remove query string if appended.
             list($path, $path_options) = Elixir::parseOptions($path);
+            unset($file_paths);
 
             // Remove search depth if appended.
             if (substr($path, -2) == '**') {
